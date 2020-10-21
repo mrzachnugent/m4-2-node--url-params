@@ -19,7 +19,10 @@ const PopularArtistPage = () => {
   return (
     <>
       <Header pageTitle="Most Popular Artist" />
-      <Content>Most popular artist's songs...</Content>
+
+      {songs.map((song) => {
+        return <Content song={song} />;
+      })}
     </>
   );
 };

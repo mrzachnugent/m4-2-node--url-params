@@ -20,7 +20,10 @@ const ArtistPage = () => {
   return (
     <>
       <Header pageTitle={`Songs by ${artistName}`} />
-      <Content>Songs by this artist...</Content>
+
+      {songs.map((song) => {
+        return <Content song={song} />;
+      })}
     </>
   );
 };

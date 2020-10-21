@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Header";
-import Content from "./Content";
 
 const HomePage = () => {
   const [artists, setArtists] = useState([]);
@@ -18,7 +17,7 @@ const HomePage = () => {
   return (
     <>
       <Header pageTitle="Music Homepage" />
-      <Content>
+      <div style={{ padding: "0 24px 24px" }}>
         <h2 style={{ marginTop: "24px" }}>Popular Links</h2>
         <Menu>
           <li>
@@ -36,7 +35,7 @@ const HomePage = () => {
             </li>
           ))}
         </Menu>
-      </Content>
+      </div>
     </>
   );
 };
